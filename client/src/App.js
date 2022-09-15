@@ -6,6 +6,15 @@ function App() {
 
   const [movieName, setMovieName] = useState('')
   const [review, setReview] = useState('')
+  const [listReview,setListReview] = useState([])
+  const [deletedMovie,setDeletedMovie] = useState('')
+  
+
+  useEffect(() => {
+    Axios.get('http://localhost:3001/api/get').then((response) => {
+      setListReview(response.data)
+    })
+  })
 
 function submitReview(){  
   Axios.post('http://localhost:3001/api/insert', {
@@ -19,7 +28,7 @@ function submitReview(){
   return (
     <div className="App">
       <div className="form">
-        <h1>Crud Application</h1> 
+        <h1>Movie Review</h1> 
         <label>Movie Name</label>
         <input 
           type="text" 
@@ -35,6 +44,9 @@ function submitReview(){
             setReview(e.target.value)
           }}/>
         <button onClick={submitReview}>Submit</button>
+        {listReview.map((item) => {
+          return <p1>Movie Name: {item.movieName} | Movie Review: {item.movieReview}</p1>
+        })}
       </div>
     </div>
   );
