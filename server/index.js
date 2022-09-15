@@ -12,10 +12,10 @@ var db = mysql.createPool({
 });
 
 app.use(cors())
-app.use(express.json())
+app.use(express.json())//changes object into json
 app.use(bodyParser.urlencoded({extended: true}))
 
-
+//gets all data from movie_review and sends it to the frontend
 app.get("/api/get", (req,res) => {
   const sqlSelect = "SELECT * FROM movie_review"
   db.query(sqlSelect, (err,result) => {
@@ -23,7 +23,7 @@ app.get("/api/get", (req,res) => {
   })
 })
 
-
+//insert data into db
 app.post("/api/insert", (req,res) => {
   const movieName = req.body.movieName
   const movieReview = req.body.movieReview
@@ -37,8 +37,7 @@ app.post("/api/insert", (req,res) => {
 });
 
 
-
-
+//lets you know when port is running
 app.listen(3001, () => {
   console.log('running on port 3001')
 })
