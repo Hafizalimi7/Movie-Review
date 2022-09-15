@@ -1,4 +1,4 @@
-# Random-Quotes
+# Movie Review 
 
 This is a Random-Quotes exercise project using CRUD web-application with ReactJS, NodeJS, Express, and MySQL.
 
