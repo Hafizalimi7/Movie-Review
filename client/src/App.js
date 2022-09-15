@@ -9,7 +9,7 @@ function App() {
   const [movieReviewList,setMovieReviewList] = useState([])
   
   
-//gets data from db and add it to an array 
+//gets data from backend and add it to an array 
   useEffect(() => {
     Axios.get('http://localhost:3001/api/get').then((response) => {
       setMovieReviewList(response.data)
@@ -27,6 +27,11 @@ function submitReview(){
     ...movieReviewList,
     {movieName: movieName, movieReview: review}
   ])
+}
+
+//sets up new route from deleting moviein backend
+function deleteReview(movie){
+  Axios.delete(`http://localhost:3001/api/delete/${movie}`)
 }
 
   return (
@@ -55,7 +60,7 @@ function submitReview(){
               <h2>{val.movieName}</h2>
               <p>{val.movieReview}</p>
 
-              <button>Delete</button>
+              <button onClick={() => {deleteReview(val.movieName)}}>Delete</button>
               <input type="text" id="updateInput"/>
               <button>Update</button>
             </div>

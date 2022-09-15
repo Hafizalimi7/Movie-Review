@@ -36,6 +36,17 @@ app.post("/api/insert", (req,res) => {
   });
 });
 
+//deletes movie from db
+app.delete("/api/delete/:movieName", (req,res) => {
+  const movieName = req.params.movieName
+
+  const sql = 
+    "DELETE FROM movie_review WHERE movieName = ?;"
+  db.query(sql, movieName, (err,result) => {
+    console.log(`number of deleted items from ${result.affectedRows} `)
+  })
+})
+
 
 //lets you know when port is running
 app.listen(3001, () => {
