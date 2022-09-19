@@ -5,7 +5,7 @@ This is a Random-Quotes exercise project using CRUD web-application with ReactJS
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Installation
-Clone the repo to the machine:  
+Clone the repo to the machine:   
 ```
 git clone https://github.com/Hafizalimi7/Random-Quotes.git
 $ cd client
