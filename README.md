@@ -1,11 +1,11 @@
-# Random-Quotes
+# Movie Review 
 
 This is a Random-Quotes exercise project using CRUD web-application with ReactJS, NodeJS, Express, and MySQL.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Installation
-Clone the repo to the machine:  
+Clone the repo to the machine:   
 ```
 git clone https://github.com/Hafizalimi7/Random-Quotes.git
 $ cd client
@@ -19,7 +19,7 @@ $ nodemon to run backend
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, you can run: 
 
 ### `npm start`
 
@@ -42,5 +42,5 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information. 
 
