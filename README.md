@@ -1,6 +1,9 @@
 # Movie Review 
 
 This is a Random-Quotes exercise project using CRUD web-application with ReactJS, NodeJS, Express, and MySQL.
+- Can add review name and review
+- Can also delete review
+- Can also update review
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
