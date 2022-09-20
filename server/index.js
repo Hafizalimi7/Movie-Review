@@ -47,6 +47,18 @@ app.delete("/api/delete/:movieName", (req,res) => {
   })
 })
 
+//update movie review
+app.put("/api/update", (req,res) => {
+  const movieName = req.body.movieName
+  const review = req.body.movieReview
+  const sqlUpdate = 
+    "UPDATE movie_review SET movieReview = ? WHERE movieName = ?";
+
+    db.query(sqlUpdate,[review, movieName], (err,result) => {
+      console.log(`How many updates ${result.affectedRows}`)
+    })
+})
+
 
 //lets you know when port is running
 app.listen(3001, () => {
